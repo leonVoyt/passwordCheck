@@ -1,0 +1,65 @@
+.password-checker {
+  width: 320px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  row-gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.strength-indicator {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.section {
+  flex: 1;
+  height: 10px;
+  background-color: lightgray;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.section.red {
+  background-color: red;
+}
+
+.section.yellow {
+  background-color: yellow;
+}
+
+.section.green {
+  background-color: green;
+}
+
+.section.gray {
+  background-color: lightgray;
+}
+.strength-value.red {
+  color: red;
+}
+
+.strength-value.yellow {
+  color: yellow;
+}
+
+.strength-value.green {
+  color: green;
+}
+
+.strength-value.gray {
+  color: lightgray;
+}
+.strength-value {
+  line-height: 24px;
+  height: 24px;
+  text-transform: uppercase;
+}
