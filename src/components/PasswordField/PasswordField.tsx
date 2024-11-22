@@ -1,7 +1,16 @@
-import React, { useMemo, useState } from "react";
+import { FC, useMemo, useState } from "react";
 import EyeSVG from "../../assets/img/svg/Eye";
 import "./styles.css";
-const PasswordField = ({ placeholder, handleChange, value }) => {
+interface PasswordFieldProsp {
+  placeholder: string;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  value: string;
+}
+const PasswordField: FC<PasswordFieldProsp> = ({
+  placeholder,
+  handleChange,
+  value,
+}) => {
   const [isVisible, setVisible] = useState(false);
 
   const fieldType = useMemo(() => {
@@ -17,7 +26,7 @@ const PasswordField = ({ placeholder, handleChange, value }) => {
         id="password"
         value={value}
         onChange={handleChange}
-        placeholder="Enter your password"
+        placeholder={placeholder}
       />
 
       <div className="passwordFieldIcon" onClick={() => setVisible(!isVisible)}>
