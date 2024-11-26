@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { StrengthTypes } from "../../types";
-import { getColorByOrderField } from "../../utils/functions";
+import { StrengthTypes } from "../../../types";
+import { getColorByOrderField } from "../../../utils/functions";
 
 interface PasswordStrengthSegmentProps {
   strength: StrengthTypes;

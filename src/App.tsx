@@ -1,10 +1,10 @@
 import "./App.css";
-import PasswordStrengthChecker from "./components/PasswordStrengthChecker/PasswordStrengthChecker";
+import PasswordPage from "./pages/PasswordPage/Password";
 
 function App() {
   return (
     <main className="main">
-      <PasswordStrengthChecker />
+      <PasswordPage />
     </main>
   );
 }

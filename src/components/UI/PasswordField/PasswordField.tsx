@@ -1,29 +1,30 @@
-import { FC, useMemo, useState } from "react";
-import EyeSVG from "../../assets/img/svg/Eye";
+import { ChangeEvent, FC, useMemo, useState } from "react";
+import EyeSVG from "../../../assets/img/svg/Eye";
 import "./styles.css";
+import { fieldType } from "../../../types";
 interface PasswordFieldProsp {
   placeholder: string;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   value: string;
+  htmlId: string;
 }
 const PasswordField: FC<PasswordFieldProsp> = ({
   placeholder,
   handleChange,
   value,
+  htmlId,
 }) => {
-  const [isVisible, setVisible] = useState(false);
+  const [isVisible, setVisible] = useState<boolean>(false);
 
-  const fieldType = useMemo(() => {
-    if (isVisible) {
-      return "text";
-    }
-    return "password";
-  }, [isVisible]);
+  const fieldType: fieldType = useMemo(
+    () => (isVisible ? "text" : "password"),
+    [isVisible]
+  );
   return (
     <div className="fieldPasswordContainer">
       <input
         type={fieldType}
-        id="password"
+        id={htmlId}
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
