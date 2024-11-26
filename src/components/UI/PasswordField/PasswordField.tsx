@@ -2,12 +2,14 @@ import { ChangeEvent, FC, useMemo, useState } from "react";
 import EyeSVG from "../../../assets/img/svg/Eye";
 import "./styles.css";
 import { fieldType } from "../../../types";
+
 interface PasswordFieldProsp {
   placeholder: string;
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   value: string;
   htmlId: string;
 }
+
 const PasswordField: FC<PasswordFieldProsp> = ({
   placeholder,
   handleChange,
@@ -20,6 +22,7 @@ const PasswordField: FC<PasswordFieldProsp> = ({
     () => (isVisible ? "text" : "password"),
     [isVisible]
   );
+
   return (
     <div className="fieldPasswordContainer">
       <input
@@ -36,4 +39,5 @@ const PasswordField: FC<PasswordFieldProsp> = ({
     </div>
   );
 };
+
 export default PasswordField;

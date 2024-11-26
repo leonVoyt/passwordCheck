@@ -1,12 +1,7 @@
-import "./App.css";
-import PasswordPage from "./pages/PasswordPage/Password";
+import PasswordPage from "./pages/PasswordPage/PasswordPage";
 
 function App() {
-  return (
-    <main className="main">
-      <PasswordPage />
-    </main>
-  );
+  return <PasswordPage />;
 }
 
 export default App;

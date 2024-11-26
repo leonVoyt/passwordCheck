@@ -10,6 +10,7 @@ export const getColorByOrderField = (
 
 export const calculateStrength = (pwd: string): StrengthTypes => {
   if (pwd.length === 0) return "empty";
+
   if (pwd.length < 8) return "short";
 
   const hasLetter = hasLetters(pwd);
@@ -17,6 +18,7 @@ export const calculateStrength = (pwd: string): StrengthTypes => {
   const hasSymbol = hasSymbols(pwd);
 
   if (hasLetter && hasDigit && hasSymbol) return "strong";
+
   if (
     (hasLetter && hasDigit) ||
     (hasLetter && hasSymbol) ||

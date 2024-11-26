@@ -1,4 +1,4 @@
-import { MockField, StrengthColors, StrengthTypes } from "../types";
+import { StrengthColors, StrengthTypes } from "../types";
 
 export const colorPriority: Record<StrengthTypes, StrengthColors[]> = {
   strong: ["green", "green", "green"],
@@ -8,8 +8,8 @@ export const colorPriority: Record<StrengthTypes, StrengthColors[]> = {
   empty: ["gray", "gray", "gray"],
 };
 
-export const mockFieldsList: MockField[] = [{ id: 0 }, { id: 1 }, { id: 2 }];
-
 export const hasLetters = (pwd: string): boolean => /[a-zA-Z]/.test(pwd);
+
 export const hasDigits = (pwd: string): boolean => /\d/.test(pwd);
+
 export const hasSymbols = (pwd: string): boolean => /[^a-zA-Z0-9]/.test(pwd);

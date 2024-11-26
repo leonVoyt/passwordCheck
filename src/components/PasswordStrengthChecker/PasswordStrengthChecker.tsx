@@ -3,8 +3,8 @@ import "./styles.css";
 import { StrengthTypes } from "../../types";
 import { calculateStrength, getColorByOrderField } from "../../utils/functions";
 import PasswordField from "../UI/PasswordField/PasswordField";
-import { mockFieldsList } from "../../utils/constants";
 import PasswordStrengthSegment from "../UI/PasswordStrengthSegment/PasswordStrengthSegment";
+import { mockFieldsList } from "../../utils/mocks";
 
 const PasswordStrengthChecker: FC = () => {
   const [password, setPassword] = useState<string>("");
